@@ -1,0 +1,19 @@
+import os
+from PIL import Image
+
+#G:\项目\Change_Architec\data
+
+infile = r'G:/项目/Change_Architec/data/train1'
+outfile = r'G:/项目/Change_Architec/data/Train/'
+folddirs = os.listdir(infile)
+filecount = 0
+for foldername in folddirs:
+    filepath = infile +'/' +foldername
+    img = Image.open(filepath).convert('L')
+    out = img.resize((256,256),Image.ANTIALIAS)
+    filecount = filecount + 1
+
+    print(filecount)
+
+    newfilename = outfile + str(filecount) + '.png'
+    out.save(newfilename)
