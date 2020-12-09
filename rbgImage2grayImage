@@ -9,11 +9,15 @@ folddirs = os.listdir(infile)
 filecount = 0
 for foldername in folddirs:
     filepath = infile +'/' +foldername
-    img = Image.open(filepath).convert('L')
-    out = img.resize((256,256),Image.ANTIALIAS)
+    print(filepath)
+    #img = Image.open(filepath).convert('L')    #origin to gray and change size
+    img = Image.open(filepath)                  #change original size 
+    Img = np.array(img)
+    shape = Img.shape
+    out = img.resize((256, 256),Image.ANTIALIAS)
     filecount = filecount + 1
 
     print(filecount)
 
-    newfilename = outfile + str(filecount) + '.png'
+    newfilename = outfile + str(filecount) + '.bmp'
     out.save(newfilename)
