@@ -1,0 +1,26 @@
+import numpy as np
+import os
+from PIL import Image
+import imageio
+
+def imsave(image,path):
+  return imageio.imwrite(path,image)
+
+Input_Dir_Path = r'C:/Users/WKN/Desktop/6'
+
+Out_Dir_Path = r'C:/Users/WKN/Desktop/6/results/'
+
+if not os.path.exists(Out_Dir_Path):
+  os.makedirs(Out_Dir_Path)
+
+Input_Image_Name_List = os.listdir(Input_Dir_Path)
+print(Input_Image_Name_List)
+num=0
+for image_name in Input_Image_Name_List:
+  print(image_name)
+  all = np.load(Input_Dir_Path+'/'+image_name)
+  print(all.shape)
+  print(all)
+  imsave(all,Out_Dir_Path + "/%s" % str(num)+'.jpg')
+  num+=1
+
