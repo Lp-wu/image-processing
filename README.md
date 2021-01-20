@@ -1,8 +1,8 @@
 # image-processing
 
-##fits file to jpg file
+## fits file to jpg file
 
-###folder path trees
+### folder path trees
 
 > fitsdata/
 
