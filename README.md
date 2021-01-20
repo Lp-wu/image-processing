@@ -34,7 +34,8 @@
 
 > ...
 
+```
+python fits2jpg.py --input your_fits_data_folder --mode 0    #train data mode
 
-'python fits2jpg.py --input your_fits_data_folder --mode 0 '
-
-'python fits2jpg.py --input your_fits-data_foleer --mode 1 '
+python fits2jpg.py --input your_fits-data_foleer --mode 1    #test data mode 
+```
