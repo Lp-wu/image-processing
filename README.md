@@ -18,9 +18,11 @@
 > fitsdata/fits_test/587722981744771128/587722981744771128-z.fits
 > ...
 
+####train jpg files
 '''
-python fits2jpg.py --input your_fits_data_folder --mode 0   #train jpg files
+python fits2jpg.py --input your_fits_data_folder --mode 0   
 '''
+####test jpg files
 '''
-python fits2jpg.py --input your_fits-data_foleer --mode 1   #test jpg files
+python fits2jpg.py --input your_fits-data_foleer --mode 1  
 '''
